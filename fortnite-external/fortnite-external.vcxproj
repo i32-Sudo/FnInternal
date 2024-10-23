@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c9ea2445-6606-472e-8417-b001236cbede}</ProjectGuid>
+    <RootNamespace>fortniteexternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\marmasm.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\fortnite-bootstrap\</OutDir>
+    <IntDir>..\fortnite-bootstrap\intermediates\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>..\fortnite-external\dependencies\framework\freetype\include;..\fortnite-external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="core\core.cpp" />
+    <ClCompile Include="core\game\cache\cache.cpp" />
+    <ClCompile Include="core\game\features\combat\combat.cpp" />
+    <ClCompile Include="core\game\features\visuals\visuals.cpp" />
+    <ClCompile Include="core\render\render.cpp" />
+    <ClCompile Include="dependencies\communications\communications.cpp" />
+    <ClCompile Include="dependencies\framework\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="dependencies\framework\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="dependencies\framework\custom\custom_widgets.cpp" />
+    <ClCompile Include="dependencies\framework\custom\imgui_freetype.cpp" />
+    <ClCompile Include="dependencies\framework\imgui.cpp" />
+    <ClCompile Include="dependencies\framework\imgui_draw.cpp" />
+    <ClCompile Include="dependencies\framework\imgui_tables.cpp" />
+    <ClCompile Include="dependencies\framework\imgui_widgets.cpp" />
+    <ClCompile Include="dependencies\framework\misc\cpp\imgui_stdlib.cpp" />
+    <ClCompile Include="dependencies\framework\misc\fonts\binary_to_compressed_c.cpp" />
+    <ClCompile Include="dependencies\framework\misc\freetype\imgui_freetype.cpp" />
+    <ClCompile Include="dependencies\interception\interception.c" />
+    <ClCompile Include="dependencies\uiaccess\uiaccess.cpp" />
+    <ClCompile Include="entrypoint.cpp" />
+    <ClCompile Include="utilities\interface\interface.cpp" />
+    <ClCompile Include="utilities\settings\config\config.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\core.hpp" />
+    <ClInclude Include="core\game\cache\cache.hpp" />
+    <ClInclude Include="core\game\features\combat\combat.hpp" />
+    <ClInclude Include="core\game\features\visuals\visuals.hpp" />
+    <ClInclude Include="core\game\sdk.hpp" />
+    <ClInclude Include="core\game\structures.hpp" />
+    <ClInclude Include="core\render\render.hpp" />
+    <ClInclude Include="dependencies\communications\communications.hpp" />
+    <ClInclude Include="dependencies\framework\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="dependencies\framework\backends\imgui_impl_win32.h" />
+    <ClInclude Include="dependencies\framework\custom\custom_colors.h" />
+    <ClInclude Include="dependencies\framework\custom\custom_settings.h" />
+    <ClInclude Include="dependencies\framework\custom\custom_widgets.h" />
+    <ClInclude Include="dependencies\framework\custom\fonts.h" />
+    <ClInclude Include="dependencies\framework\custom\images.h" />
+    <ClInclude Include="dependencies\framework\custom\imgui_freetype.h" />
+    <ClInclude Include="dependencies\framework\d3d\d3d11.h" />
+    <ClInclude Include="dependencies\framework\d3d\d3dx11.h" />
+    <ClInclude Include="dependencies\framework\d3d\d3dx11async.h" />
+    <ClInclude Include="dependencies\framework\d3d\d3dx11core.h" />
+    <ClInclude Include="dependencies\framework\d3d\d3dx11tex.h" />
+    <ClInclude Include="dependencies\framework\font.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\config\ftconfig.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\config\ftheader.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\config\ftmodule.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\config\ftoption.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\config\ftstdlib.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\freetype.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftadvanc.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftbbox.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftbdf.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftbitmap.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftbzip2.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftcache.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftchapters.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftcid.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\fterrdef.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\fterrors.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftgasp.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftglyph.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftgxval.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftgzip.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftimage.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftincrem.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftlcdfil.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftlist.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftlzw.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftmac.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftmm.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftmodapi.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftmoderr.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftotval.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftoutln.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftpfr.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftrender.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftsizes.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftsnames.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftstroke.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftsynth.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftsystem.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\fttrigon.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\fttypes.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftwinfnt.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ftxf86.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\autohint.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftcalc.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftdebug.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftdriver.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftmemory.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftobjs.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftpic.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftrfork.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftserv.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftstream.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\fttrace.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\ftvalid.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\internal.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\psaux.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\pshints.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svcid.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svkern.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svmm.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svotval.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\services\svxf86nm.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\sfnt.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\t1types.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\internal\tttypes.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\t1tables.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ttnameid.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\tttables.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\tttags.h" />
+    <ClInclude Include="dependencies\framework\freetype\freetype\ttunpat.h" />
+    <ClInclude Include="dependencies\framework\freetype\ft2build.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\ftheader.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\integer-types.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\mac-support.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\config\public-macros.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\freetype.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftadvanc.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftbbox.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftbdf.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftbitmap.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftbzip2.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftcache.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftchapters.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftcid.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftcolor.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftdriver.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\fterrdef.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\fterrors.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftgasp.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftglyph.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftgxval.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftgzip.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftimage.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftincrem.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftlist.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftlogging.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftlzw.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftmac.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftmm.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftmodapi.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftmoderr.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftotval.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftoutln.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftparams.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftpfr.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftrender.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftsizes.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftsnames.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftstroke.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftsynth.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftsystem.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\fttrigon.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\fttypes.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\otsvg.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\t1tables.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\ttnameid.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\tttables.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\freetype\tttags.h" />
+    <ClInclude Include="dependencies\framework\freetype\include\ft2build.h" />
+    <ClInclude Include="dependencies\framework\image.h" />
+    <ClInclude Include="dependencies\framework\imconfig.h" />
+    <ClInclude Include="dependencies\framework\imgui.h" />
+    <ClInclude Include="dependencies\framework\imgui_internal.h" />
+    <ClInclude Include="dependencies\framework\imstb_rectpack.h" />
+    <ClInclude Include="dependencies\framework\imstb_textedit.h" />
+    <ClInclude Include="dependencies\framework\imstb_truetype.h" />
+    <ClInclude Include="dependencies\framework\main.h" />
+    <ClInclude Include="dependencies\framework\misc\cpp\imgui_stdlib.h" />
+    <ClInclude Include="dependencies\framework\misc\freetype\imgui_freetype.h" />
+    <ClInclude Include="dependencies\framework\misc\single_file\imgui_single_file.h" />
+    <ClInclude Include="dependencies\ida.hpp" />
+    <ClInclude Include="dependencies\interception\DefsForinterp.h" />
+    <ClInclude Include="dependencies\interception\Interception.h" />
+    <ClInclude Include="dependencies\uiaccess\uiaccess.hpp" />
+    <ClInclude Include="utilities\interface\interface.hpp" />
+    <ClInclude Include="utilities\obfuscation\lazy-importer.hpp" />
+    <ClInclude Include="utilities\obfuscation\xor.hpp" />
+    <ClInclude Include="utilities\settings\config\config.hpp" />
+    <ClInclude Include="utilities\settings\settings.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="dependencies\communications\assembly\directio.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="dependencies\framework\freetype\win64\freetype.lib" />
+    <Library Include="dependencies\framework\libraries\d3d11.lib" />
+    <Library Include="dependencies\framework\libraries\d3dx11.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\marmasm.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
